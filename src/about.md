@@ -45,5 +45,3 @@ We can help you find testing sessions and study resources. Contact us to learn m
 Have questions? We'd love to hear from you.
 
 **Email:** info@more-radio.org
-
-73 de W0MORE
