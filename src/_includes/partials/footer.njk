@@ -1,0 +1,15 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-info">
+      <p class="footer-callsign">{{ site.callsign }}</p>
+      <p class="footer-name">{{ site.name }}</p>
+      <p class="footer-contact">
+        <a href="mailto:{{ site.email }}">{{ site.email }}</a>
+      </p>
+    </div>
+    <div class="footer-copyright">
+      <p>&copy; {{ page.date.getFullYear() if page.date else "2024" }} {{ site.name }}. All rights reserved.</p>
+      <p>73 de {{ site.callsign }}</p>
+    </div>
+  </div>
+</footer>

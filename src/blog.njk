@@ -1,0 +1,23 @@
+---
+layout: layouts/page.njk
+title: Blog
+---
+
+<p>News, articles, and stories from the More Radio community.</p>
+
+<ul class="blog-list">
+{% for post in collections.posts %}
+  <li class="blog-item">
+    <h2><a href="{{ post.url }}">{{ post.data.title }}</a></h2>
+    <p class="post-meta">
+      <time datetime="{{ post.date | dateFormat }}">{{ post.date | dateFormat }}</time>
+      {% if post.data.author %}<span class="post-author">by {{ post.data.author }}</span>{% endif %}
+    </p>
+    {% if post.data.description %}
+    <p class="blog-excerpt">{{ post.data.description }}</p>
+    {% endif %}
+  </li>
+{% else %}
+  <li>No posts yet. Check back soon!</li>
+{% endfor %}
+</ul>
