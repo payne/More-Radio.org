@@ -82,3 +82,26 @@
     });
   }
 })();
+
+// Bottom Banner
+(function() {
+  const banner = document.getElementById('bottom-banner');
+  const closeBtn = document.getElementById('banner-close');
+
+  function hideBanner() {
+    banner.classList.add('is-hidden');
+    document.body.classList.add('banner-hidden');
+  }
+
+  if (banner && closeBtn) {
+    // Check if banner was hidden this session
+    if (sessionStorage.getItem('bannerHidden') === 'true') {
+      hideBanner();
+    }
+
+    closeBtn.addEventListener('click', function() {
+      hideBanner();
+      sessionStorage.setItem('bannerHidden', 'true');
+    });
+  }
+})();
